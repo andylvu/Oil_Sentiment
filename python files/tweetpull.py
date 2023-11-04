@@ -50,7 +50,7 @@ class tweetpull:
         return df
 
 if __name__ == "__main__":
-    bearer_token = 'AAAAAAAAAAAAAAAAAAAAAHwkbQEAAAAAU%2Ffmq5LdPnQvnS%2BBKxxP5WzikUA%3DGEHkRGtbIeZFnDfyRFOFjLvcOcIrgXOOwKmExeqArJZ90bgKHj'
+    bearer_token = ''
     
     collector = tweetpull(bearer_token)
     
@@ -66,7 +66,7 @@ if __name__ == "__main__":
 # orginal code
 """
 # tweepy client using academic research token
-client = tweepy.Client(bearer_token='AAAAAAAAAAAAAAAAAAAAAHwkbQEAAAAAU%2Ffmq5LdPnQvnS%2BBKxxP5WzikUA%3DGEHkRGtbIeZFnDfyRFOFjLvcOcIrgXOOwKmExeqArJZ90bgKHj')
+client = tweepy.Client(bearer_token='')
 
 
 # query with start and end dates
