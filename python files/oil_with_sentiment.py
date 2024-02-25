@@ -16,7 +16,7 @@ seed(1)
 random.set_seed(2)
 
 # Read APPL.csv contains open, high, low, close, Adj close, Volume of Apple stock with twitter polarity scores and twitter volume
-df = pd.read_csv(r'C:\Users\Andy\Documents\vscode\Machine_Learning\Project\datasets\oil_final2.csv', index_col="Date", infer_datetime_format=True, parse_dates=True)
+df = pd.read_csv('C:/Users/Andy/Documents/vscode/Oil_Sentiment/datasets/oil_final2.csv', index_col="Date", infer_datetime_format=True, parse_dates=True)
 
 # Drop null values
 df.dropna(inplace=True)
@@ -123,7 +123,6 @@ model.add(Dropout(dropout_fraction))
 model.add(LSTM(units=number_units))
 model.add(Dropout(dropout_fraction))
 
-
 # Output layer
 model.add(Dense(1))
 
@@ -134,7 +133,7 @@ model.compile(optimizer="adam", loss="mean_squared_error")
 model.summary()
 
 # Train the model
-model.fit(X_train, y_train, epochs=10, shuffle=False, batch_size=5, verbose=1)
+model.fit(X_train, y_train, epochs=20, shuffle=False, batch_size=5, verbose=1)
 
 # Make some predictions
 predicted = model.predict(X_test)
